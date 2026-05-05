@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Patitas Felices - Cuidado Profesional de Mascotas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>🐶 Veterinaria Patitas Felices</h1>
+    <p>Cuidamos a tus mascotas con amor y profesionalismo</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#programas">Programas</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h2>Bienvenido a Patitas Felices</h2>
+        <p>Tu clínica veterinaria de confianza desde 2015</p>
+        <button class="btn-hero" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">Contáctanos</button>
+    </div>
+</section>
+
+<section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-container">
+        <div class="card">
+            <div class="card-icon">🏥</div>
+            <h3>Consulta General</h3>
+            <p>Revisión médica completa, diagnóstico y tratamiento para tu mascota.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">💉</div>
+            <h3>Vacunación</h3>
+            <p>Programas completos de inmunización según edad y raza de tu mascota.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🛁</div>
+            <h3>Baño y Estética</h3>
+            <p>Grooming profesional, corte de uñas y limpieza de oídos.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🦷</div>
+            <h3>Limpieza Dental</h3>
+            <p>Cuidado completo de la salud bucal de tu mascota.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🏃</div>
+            <h3>Cirugía</h3>
+            <p>Procedimientos quirúrgicos menores y mayores con anestesia segura.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🐾</div>
+            <h3>Urgencias 24/7</h3>
+            <p>Atención de emergencias las 24 horas, todos los días de la semana.</p>
+        </div>
+    </div>
+</section>
+
+<section id="programas">
+    <h2>Programas de Cuidados</h2>
+    <p class="programas-desc">Elige el programa que mejor se adapte a las necesidades de tu mascota</p>
+    
+    <div class="programas-container">
+        <!-- Programa Básico -->
+        <div class="programa-card basico">
+            <div class="programa-header">
+                <h3>🐕 Programa Básico</h3>
+                <div class="precio">$49<span>/mes</span></div>
+            </div>
+            <ul class="programa-beneficios">
+                <li>✓ 1 consulta mensual</li>
+                <li>✓ Descuento 10% en medicinas</li>
+                <li>✓ Asesoría por teléfono</li>
+                <li>✓ Historial médico digital</li>
+                <li>✗ Emergencias</li>
+            </ul>
+            <button class="btn-programa" onclick="agendar()">Seleccionar</button>
+        </div>
+
+        <!-- Programa Premium -->
+        <div class="programa-card premium destacado">
+            <div class="badge">MÁS POPULAR</div>
+            <div class="programa-header">
+                <h3>⭐ Programa Premium</h3>
+                <div class="precio">$89<span>/mes</span></div>
+            </div>
+            <ul class="programa-beneficios">
+                <li>✓ 2 consultas mensuales</li>
+                <li>✓ 1 baño y estética al mes</li>
+                <li>✓ Descuento 20% en medicinas</li>
+                <li>✓ Asesoría nutricional básica</li>
+                <li>✓ Emergencias (descuento 30%)</li>
+            </ul>
+            <button class="btn-programa btn-premium" onclick="agendar()">Seleccionar</button>
+        </div>
+
+        <!-- Programa VIP -->
+        <div class="programa-card vip">
+            <div class="programa-header">
+                <h3>👑 Programa VIP</h3>
+                <div class="precio">$149<span>/mes</span></div>
+            </div>
+            <ul class="programa-beneficios">
+                <li>✓ 4 consultas mensuales</li>
+                <li>✓ 2 baños y estéticas al mes</li>
+                <li>✓ Limpieza dental anual incluida</li>
+                <li>✓ Descuento 30% en medicinas</li>
+                <li>✓ Asesoría nutricional especializada</li>
+                <li>✓ Emergencias 24/7 sin costo</li>
+                <li>✓ Transporte a domicilio</li>
+            </ul>
+            <button class="btn-programa btn-vip" onclick="agendar()">Seleccionar</button>
+        </div>
+    </div>
+</section>
+
+<section id="galeria">
+    <h2>Galería de Fotos</h2>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="consulta">Consultas</button>
+        <button class="filter-btn" data-filter="bano">Baños</button>
+        <button class="filter-btn" data-filter="vacunacion">Vacunaciones</button>
+        <button class="filter-btn" data-filter="cirugias">Cirugías</button>
+    </div>
+    
+    <div class="galeria">
+        <div class="galeria-item" data-category="consulta">
+            <img src="https://images.unsplash.com/photo-1587300411515-430ee3ab9ef4?w=400&h=300&fit=crop" alt="Consulta veterinaria">
+            <p>Consulta General</p>
+        </div>
+        <div class="galeria-item" data-category="bano">
+            <img src="https://images.unsplash.com/photo-1601758228578-8ec89f086a3a?w=400&h=300&fit=crop" alt="Baño de mascota">
+            <p>Grooming Profesional</p>
+        </div>
+        <div class="galeria-item" data-category="vacunacion">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5f400f4f7?w=400&h=300&fit=crop" alt="Vacunación">
+            <p>Programa de Vacunación</p>
+        </div>
+        <div class="galeria-item" data-category="consulta">
+            <img src="https://images.unsplash.com/photo-1611003228941-98852ba62227?w=400&h=300&fit=crop" alt="Revisión médica">
+            <p>Revisión Médica Completa</p>
+        </div>
+        <div class="galeria-item" data-category="bano">
+            <img src="https://images.unsplash.com/photo-1611682221318-0dd3b8b62b9f?w=400&h=300&fit=crop" alt="Grooming">
+            <p>Corte Profesional</p>
+        </div>
+        <div class="galeria-item" data-category="cirugias">
+            <img src="https://images.unsplash.com/photo-1581839892328-e355cc5133f5?w=400&h=300&fit=crop" alt="Cirugía">
+            <p>Procedimiento Quirúrgico</p>
+        </div>
+        <div class="galeria-item" data-category="consulta">
+            <img src="https://images.unsplash.com/photo-1576091160550-112173fbb967?w=400&h=300&fit=crop" alt="Cuidado integral">
+            <p>Cuidado Integral</p>
+        </div>
+        <div class="galeria-item" data-category="bano">
+            <img src="https://images.unsplash.com/photo-1576091160671-112d4ae2fa11?w=400&h=300&fit=crop" alt="Masaje">
+            <p>Masaje Terapéutico</p>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" src="" alt="">
+    <p class="lightbox-caption"></p>
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+</div>
+
+<section id="nosotros" class="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <div class="nosotros-content">
+        <div class="nosotros-text">
+            <p>Somos una veterinaria dedicada al cuidado integral de animales domésticos desde hace más de 10 años. Contamos con un equipo de profesionales altamente capacitados y comprometidos con el bienestar de tus mascotas.</p>
+            <p>Utilizamos tecnología de punta y mantenemos los más altos estándares de higiene y seguridad. Cada mascota que llega a nuestras manos es tratada con el cuidado y amor que se merece.</p>
+        </div>
+        <div class="nosotros-stats">
+            <div class="stat">
+                <h4>10+</h4>
+                <p>Años de experiencia</p>
+            </div>
+            <div class="stat">
+                <h4>5000+</h4>
+                <p>Mascotas atendidas</p>
+            </div>
+            <div class="stat">
+                <h4>100%</h4>
+                <p>Satisfacción</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="contacto">
+    <h2>Contacto e Información</h2>
+    <div class="contacto-container">
+        <div class="contacto-info">
+            <div class="info-item">
+                <h4>📱 Teléfono</h4>
+                <p><a href="tel:1234567890">+1 (234) 567-890</a></p>
+            </div>
+            <div class="info-item">
+                <h4>📧 Email</h4>
+                <p><a href="mailto:info@patitasfelices.com">info@patitasfelices.com</a></p>
+            </div>
+            <div class="info-item">
+                <h4>📍 Ubicación</h4>
+                <p>Calle Principal 123, Ciudad</p>
+            </div>
+            <div class="info-item">
+                <h4>🕐 Horario</h4>
+                <p>Lunes a Viernes: 9:00 AM - 7:00 PM<br>Sábado: 10:00 AM - 3:00 PM<br>Emergencias 24/7</p>
+            </div>
+        </div>
+        <button class="btn-cita" onclick="agendar()">🗓️ Agendar Cita Ahora</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Veterinaria Patitas Felices - Todos los derechos reservados</p>
+    <p>Cuidamos a tus mascotas con amor ❤️</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
